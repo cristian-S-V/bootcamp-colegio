@@ -25,11 +25,12 @@ header {
     padding: 30px 20px;
     z-index: 10;
 }
-.menu .logo {
+
+.logo {
     width: 150px; 
     height: 100px; 
-    
 }
+
 .menu.abajo {
     background-color: #fff;
     padding: 15px 20px;
@@ -48,7 +49,7 @@ nav {
 
 .menu ul li {
     margin: 0 15px;
-    position: relative; /* Asegura que el submenú esté posicionado correctamente */
+    position: relative;
 }
 
 .menu ul li a {
@@ -70,7 +71,7 @@ nav {
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: red; /* Cambia este color por el que desees */
+    background-color: red;
     transform-origin: bottom right;
     transition: transform 0.25s ease-out;
 }
@@ -78,30 +79,6 @@ nav {
 .menu ul li a:hover::after {
     transform: scaleX(1);
     transform-origin: bottom left;
-}
-
-.menu ul li ul {
-    position: absolute;
-    top: 100%; /* Coloca el submenú justo debajo del elemento principal */
-    left: 0; /* Alinea el submenú con el borde izquierdo del elemento principal */
-    width: 300px;
-    background-color: rgba(1, 1, 1, 0.7);
-    display: none;
-}
-
-.menu ul li ul li a {
-    font-size: 15px;
-    text-transform: capitalize;
-}
-
-.menu ul li ul li ul {
-    position: absolute;
-    top: 0;
-    left: 300px; /* Ajusta la posición de los submenús anidados */
-}
-
-.menu ul li:hover > ul {
-    display: block;
 }
 
 .menu.abajo .logo,
@@ -114,17 +91,17 @@ header .logo {
 }
 
 .portada {
-    height: 50vh; /* Altura ajustable según necesidad */
-    background-image: url('/imgPage/imagen1.jpg'); /* Ruta correcta y accesible de la imagen */
+    height: 50vh; 
+    background-image: url('/imgPage/imagen1.jpg'); 
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-position-y: 18.8%;
-    text-align: center; /* Ajusta según el contenido */
+    text-align: center; 
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #fff; /* Color del texto */
+    color: #fff; 
 }
 
 .menu-desglos{
@@ -140,6 +117,7 @@ header .logo {
     
 }
 .concepto_general{
+    background: #f0f4f8;
     padding: 50px 20em;
     line-height: 2em;
     margin-bottom: 2em;
@@ -407,67 +385,67 @@ header .logo {
 
 /* CARUUSEL FIN */
 
-.objetivo{
-    display: flex;
-    flex-direction: row*3;
-    justify-content: space-between;
-    padding-left: 4em;
-    padding-right: 4em; 
-    gap: 2em;
-    padding-bottom: 4em  ;
-    flex-wrap: wrap;
-    
-    
-}
-.ob-tit{
-    padding: 1em;
-    font-size: 30px;
-    font-weight: bold;
-    
-}
-.objetivo-vari{
-    font-size: 20px;
-    color: #0056b3;
-    padding-bottom: 2em; 
-    padding: 2em 15em;
-    margin-bottom: 2em;
-}
-.objetivo_doble{
-    display: flex;
-    flex-direction: row*3;
-    padding: 0 10em;
-    
-}
-.img_objetivo{
-    background-color: #ffff;
-    width: 50%;
-    height: auto;
-    
-}
-.objetivo-var {
-    width: 300px;
-    height: auto;
-    border-radius: 5px;
-    box-shadow: 10px 5px 5px #0056b3;
-    opacity: 0; /* Inicialmente invisible */
-    transform: scale(0.25); /* Inicialmente escalado */
-    transition: opacity 1s linear, transform 1s linear; /* Transición suave */
-}
-
-.objetivo-var h1 {
+/* Contenedor principal de los objetivos */
+.objetivos-main {
+    padding: 2em 0;
+    background: #f0f4f8;
     text-align: center;
 }
 
-.objetivo-var p {
-    padding: 0 1em;
-    padding-bottom: 1em;
-    line-height: 1.5em;
+/* Título principal */
+.objetivo-vari {
+    font-size: 1.5em;
+    color: #0056b3;
+    padding: 1em 0;
+    margin-bottom: 1em;
 }
 
+/* Contenedor de todos los objetivos */
+.objetivo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2em;
+    padding: 2em;
+}
+
+/* Título de cada objetivo */
+.ob-tit {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+    color: #333;
+}
+
+/* Contenedor individual de cada objetivo */
+.objetivo-var {
+    width: 300px;
+    padding: 1.5em;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0; /* Inicialmente invisible */
+    transform: translateY(30px); /* Inicialmente desplazado */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out; /* Transición suave */
+}
+
+/* Animación de aparición */
 .objetivo-var.show {
     opacity: 1; /* Aparecerá */
-    transform: scale(1) translateY(10px); /* Volverá a su posición original */
+    transform: translateY(0); /* Volverá a su posición original */
 }
+
+/* Estilo del texto dentro de cada objetivo */
+.objetivo-var p {
+    font-size: 1em;
+    color: #555;
+    line-height: 1.6em;
+    margin-top: 0.5em;
+}
+
+/* Mejora la responsividad */
+
+
 
 
 /* 
@@ -491,7 +469,7 @@ footer {
 }
 
 .footer-logo img {
-    width: 20em;
+    width: 21em;
     height: 200px;
 }
 
@@ -540,6 +518,9 @@ footer {
 }
 /* Tablet */
 @media (max-width: 768px) {
+   
+    
+    
     .menu ul {
         flex-direction: column;
         background-color: #847b7bb5;
@@ -584,6 +565,13 @@ footer {
     .contenedor-main {
         grid-template-columns: 1fr;
     }
+
+    .objetivo {
+        padding: 1em;
+    }
+    .objetivo-var {
+        width: 90%;
+    }
     .valor-img {
         width: 140px;
         height: 140px;
@@ -611,6 +599,10 @@ footer {
     .footer-content {
         flex-direction: column;
         align-items: center;
+    }
+    .footer-logo img{
+        width: 16em;
+        height: 150px;
     }
 
     .social-media {
