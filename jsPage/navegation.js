@@ -1,3 +1,4 @@
+//carrusel
 let nextDom = document.getElementById('next');
 let prevDom = document.getElementById('prev');
 
@@ -32,7 +33,7 @@ function showSlider(type){
         carouselDom.classList.add('next');
     }else{
         SliderDom.prepend(SliderItemsDom[SliderItemsDom.length - 1]);
-        thumbnailBorderDom.prepend(thumbnailItemsDom[thumbnailItemsDom.length - 1]);
+        thumbnailBorderDom.prepend(thumbnailItemsDom[thumbnailItemsDom.length -1]);
         carouselDom.classList.add('prev');
     }
     clearTimeout(runTimeOut);
@@ -47,6 +48,8 @@ function showSlider(type){
     }, timeAutoNext)
 }
 
+//objetivo
+
 document.addEventListener('DOMContentLoaded', function() {
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
@@ -60,4 +63,15 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const objetivoVarElements = document.querySelectorAll('.objetivo-var');
     objetivoVarElements.forEach(el => observer.observe(el));
+});
+window.addEventListener("scroll", function() {
+    const elementos = document.querySelectorAll(".objetivo-var");
+    elementos.forEach(elemento => {
+        const position = elemento.getBoundingClientRect().top;
+        const screenPosition = window.innerHeight / 1.3;
+
+        if (position < screenPosition) {
+            elemento.classList.add("show");
+        }
+    });
 });

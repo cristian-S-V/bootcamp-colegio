@@ -27,14 +27,4 @@ const aparecerImagen = (imagen) => {
     imagenLight.classList.add('showImage');
 };
 
-window.addEventListener("scroll", function() {
-    const elementos = document.querySelectorAll(".objetivo-var");
-    elementos.forEach(elemento => {
-        const position = elemento.getBoundingClientRect().top;
-        const screenPosition = window.innerHeight / 1.3;
 
-        if (position < screenPosition) {
-            elemento.classList.add("show");
-        }
-    });
-});

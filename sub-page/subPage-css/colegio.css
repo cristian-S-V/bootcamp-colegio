@@ -424,15 +424,15 @@ header .logo {
     background: #fff;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    opacity: 0; /* Inicialmente invisible */
-    transform: translateY(30px); /* Inicialmente desplazado */
+    opacity: 0; 
+    transform: translateY(30px); 
     transition: opacity 0.6s ease-out, transform 0.6s ease-out; /* Transición suave */
 }
 
 /* Animación de aparición */
 .objetivo-var.show {
-    opacity: 1; /* Aparecerá */
-    transform: translateY(0); /* Volverá a su posición original */
+    opacity: 1; 
+    transform: translateY(0); 
 }
 
 /* Estilo del texto dentro de cada objetivo */
@@ -442,10 +442,6 @@ header .logo {
     line-height: 1.6em;
     margin-top: 0.5em;
 }
-
-/* Mejora la responsividad */
-
-
 
 
 /* 

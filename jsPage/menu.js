@@ -3,6 +3,7 @@ window.addEventListener("scroll", function() {
     menu.classList.toggle("abajo", window.scrollY > 0);
 });
 
+//menu
 document.addEventListener('DOMContentLoaded', function() {
     const menuDesglos = document.querySelector('.menu-desglos');
     const menu = document.querySelector('.menu ul');
